@@ -185,7 +185,9 @@
     <!-- ── PROJECTS ── -->
     <section id="projects">
       <div class="container">
-        <h2 class="section-title">Featured Projects</h2>
+
+        <!-- Production work highlights -->
+        <h2 class="section-title">Featured Work</h2>
         <div class="projects-grid">
 
           <div class="card">
@@ -198,9 +200,6 @@
             </p>
             <div class="card-tags">
               <span>LangChain</span><span>OpenAI</span><span>GCP Vertex AI</span><span>MLflow</span>
-            </div>
-            <div class="card-links">
-              <a href="#">Case Study</a>
             </div>
           </div>
 
@@ -215,9 +214,6 @@
             <div class="card-tags">
               <span>XGBoost</span><span>LSTM</span><span>FastAPI</span><span>LightGBM</span>
             </div>
-            <div class="card-links">
-              <a href="#">Case Study</a>
-            </div>
           </div>
 
           <div class="card">
@@ -231,14 +227,185 @@
             <div class="card-tags">
               <span>Python</span><span>Uplift Modeling</span><span>Statistical Testing</span>
             </div>
-            <div class="card-links">
-              <a href="#">Case Study</a>
-            </div>
           </div>
 
         </div>
+
+        <!-- ── GitHub Open-Source Projects ── -->
+        <h2 class="section-title" style="margin-top: 4rem;">Open-Source Projects</h2>
+        <p class="section-subtitle">
+          A collection of end-to-end AI/ML projects on
+          <a href="https://github.com/vamsi7964" target="_blank" rel="noopener" class="inline-link">GitHub</a>
+          — from foundational papers implemented from scratch to production-grade systems.
+        </p>
+
+        <!-- Filter tabs -->
+        <div class="projects-filter" role="tablist">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="genai">Generative AI</button>
+          <button class="filter-btn" data-filter="agentic">Agentic AI</button>
+          <button class="filter-btn" data-filter="nlp">NLP</button>
+          <button class="filter-btn" data-filter="mlops">MLOps</button>
+          <button class="filter-btn" data-filter="ml">Machine Learning</button>
+        </div>
+
+        <div class="projects-grid repo-grid">
+
+          <!-- ── Generative AI ── -->
+          <div class="card" data-category="genai">
+            <div class="card-header-row">
+              <div class="card-icon">&#9889;</div>
+              <span class="card-category-badge genai-badge">Generative AI</span>
+            </div>
+            <h3>Generative AI Suite</h3>
+            <p>
+              9 progressive projects covering the full generative AI stack: self-attention
+              and multi-head attention built from scratch, LoRA / DPO / QLoRA fine-tuning,
+              PDF and multi-format RAG pipelines, prompt engineering (CoT, self-consistency,
+              injection defense), RAGAS evaluation, and Text-to-SQL with self-correction.
+            </p>
+            <div class="card-tags">
+              <span>PyTorch</span><span>Transformers</span><span>PEFT</span><span>TRL</span>
+              <span>LangChain</span><span>FAISS</span><span>RAGAS</span><span>HuggingFace</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/vamsi7964/generative-ai" target="_blank" rel="noopener">&#128279; GitHub</a>
+            </div>
+          </div>
+
+          <!-- ── Agentic AI ── -->
+          <div class="card" data-category="agentic">
+            <div class="card-header-row">
+              <div class="card-icon">&#129302;</div>
+              <span class="card-category-badge agentic-badge">Agentic AI</span>
+            </div>
+            <h3>Agentic AI Suite</h3>
+            <p>
+              9 production-grade agentic systems demonstrating every major pattern: ReAct
+              tool-calling, LCEL pipelines, multi-agent Planner → Executor → Critic,
+              LangGraph StateGraph, Supervisor routing, Human-in-the-Loop with
+              interrupt/resume, Reflexion verbal self-critique, and Corrective RAG
+              with hallucination detection. All apps ship with Streamlit UIs.
+            </p>
+            <div class="card-tags">
+              <span>LangGraph</span><span>LangChain</span><span>FAISS</span>
+              <span>Redis</span><span>MLflow</span><span>Streamlit</span><span>Google ADK</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/vamsi7964/agentic-ai" target="_blank" rel="noopener">&#128279; GitHub</a>
+            </div>
+          </div>
+
+          <!-- ── NLP ── -->
+          <div class="card" data-category="nlp">
+            <div class="card-header-row">
+              <div class="card-icon">&#128172;</div>
+              <span class="card-category-badge nlp-badge">NLP</span>
+            </div>
+            <h3>NLP Projects</h3>
+            <p>
+              Five end-to-end NLP apps and architecture benchmarks: a Fake News Classifier
+              (LIAR dataset), Multilingual Hate Speech Detector (DistilBERT on tweets),
+              Reddit Topic Modeler (BERTopic + UMAP + HDBSCAN), Resume–Job Description
+              Matcher with semantic scoring, and head-to-head comparisons of RNN / LSTM /
+              GRU vs Transformer architectures on text classification.
+            </p>
+            <div class="card-tags">
+              <span>Transformers</span><span>DistilBERT</span><span>BERTopic</span>
+              <span>UMAP</span><span>PyTorch</span><span>FastAPI</span><span>Docker</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/vamsi7964/NLP" target="_blank" rel="noopener">&#128279; GitHub</a>
+            </div>
+          </div>
+
+          <!-- ── MLOps / CI-CD ── -->
+          <div class="card" data-category="mlops">
+            <div class="card-header-row">
+              <div class="card-icon">&#9881;</div>
+              <span class="card-category-badge mlops-badge">MLOps</span>
+            </div>
+            <h3>Machine Learning CI/CD</h3>
+            <p>
+              End-to-end MLOps pipeline that automates model training, evaluation, and
+              deployment on every code push using GitHub Actions and CML (Continuous
+              Machine Learning). Demonstrates reproducible experiment tracking,
+              model versioning with HuggingFace Model Hub, and automated performance
+              reporting directly in pull requests.
+            </p>
+            <div class="card-tags">
+              <span>GitHub Actions</span><span>CML</span><span>HuggingFace</span>
+              <span>MLflow</span><span>Docker</span><span>DVC</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/vamsi7964/Machine_Learning_CI_CD" target="_blank" rel="noopener">&#128279; GitHub</a>
+            </div>
+          </div>
+
+          <!-- ── Machine Learning ── -->
+          <div class="card" data-category="ml">
+            <div class="card-header-row">
+              <div class="card-icon">&#128200;</div>
+              <span class="card-category-badge ml-badge">Machine Learning</span>
+            </div>
+            <h3>Machine Learning Experiments</h3>
+            <p>
+              Classic ML and deep learning notebooks: Water Quality Prediction with XGBoost
+              and exhaustive hyperparameter tuning (Bayesian + grid search), RNN vs LSTM vs
+              GRU benchmarks on text classification tasks, and DistilBERT fine-tuning on the
+              IMDB sentiment dataset — with full training curves and evaluation metrics.
+            </p>
+            <div class="card-tags">
+              <span>XGBoost</span><span>Scikit-learn</span><span>PyTorch</span>
+              <span>DistilBERT</span><span>Optuna</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/vamsi7964/machine-learning" target="_blank" rel="noopener">&#128279; GitHub</a>
+            </div>
+          </div>
+
+          <!-- ── Computer Vision ── -->
+          <div class="card" data-category="ml">
+            <div class="card-header-row">
+              <div class="card-icon">&#128247;</div>
+              <span class="card-category-badge ml-badge">Computer Vision</span>
+            </div>
+            <h3>Digital Twin</h3>
+            <p>
+              Real-time digital avatar system powered by Wav2Lip: given a reference face
+              image and an audio stream, generates a photorealistic talking-head video with
+              accurate lip synchronisation. Built as a client–server app — the server runs
+              the Wav2Lip inference model and the client streams audio for low-latency
+              avatar generation.
+            </p>
+            <div class="card-tags">
+              <span>Wav2Lip</span><span>OpenCV</span><span>Python</span><span>WebSockets</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/vamsi7964/computer-vision" target="_blank" rel="noopener">&#128279; GitHub</a>
+            </div>
+          </div>
+
+        </div><!-- /.repo-grid -->
       </div>
     </section>
+
+    <script>
+      // Filter tab logic
+      const btns  = document.querySelectorAll('.filter-btn');
+      const cards = document.querySelectorAll('.repo-grid .card');
+      btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          btns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.dataset.filter;
+          cards.forEach(card => {
+            card.style.display =
+              filter === 'all' || card.dataset.category === filter ? '' : 'none';
+          });
+        });
+      });
+    </script>
 
     <!-- ── CONTACT ── -->
     <section id="contact">
@@ -289,6 +456,7 @@
       <p>Designed &amp; built by Vamsi Mudimela &mdash; 2025</p>
       <div class="footer-links">
         <a href="https://www.linkedin.com/in/vamsi-mudimela/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/vamsi7964" target="_blank" rel="noopener">GitHub</a>
         <a href="mailto:krishna.vamsi80@gmail.com">Email</a>
       </div>
     </footer>

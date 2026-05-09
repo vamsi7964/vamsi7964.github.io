@@ -563,6 +563,93 @@ footer {
 }
 
 /* ============================================================
+   OPEN-SOURCE PROJECTS — filter tabs + category badges
+   ============================================================ */
+.section-subtitle {
+  color: var(--color-muted);
+  font-size: 1rem;
+  max-width: 640px;
+  margin-bottom: 2rem;
+}
+
+.inline-link {
+  color: var(--color-accent-lt);
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+/* Filter button row */
+.projects-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  background-color: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-muted);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  border-color: var(--color-accent-lt);
+  color: var(--color-text);
+}
+
+.filter-btn.active {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+
+/* Card header row: icon + category badge side-by-side */
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.card-header-row .card-icon {
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
+/* Category badge on each card */
+.card-category-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.genai-badge   { background-color: #312e81; color: #a5b4fc; }
+.agentic-badge { background-color: #1e3a5f; color: #7dd3fc; }
+.nlp-badge     { background-color: #1b4332; color: #6ee7b7; }
+.mlops-badge   { background-color: #3b1f2b; color: #f9a8d4; }
+.ml-badge      { background-color: #2d1b00; color: #fbbf24; }
+
+/* Repo grid: wider cards — 2 cols on large screens */
+.repo-grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin-top: 0;
+}
+
+/* ============================================================
    RESPONSIVE — small screens (< 640px)
    ============================================================ */
 @media (max-width: 640px) {
